@@ -33,21 +33,9 @@ offrant ainsi une expérience visuelle et ludique.
 	-CubeIDE
   - **Bibliothèques externes:**
 
-## Configuration et Utilisation
-
-1. Clonez le dépôt sur votre machine locale.# Projet "Ball Balancing Table"
-
-	git clone https://github.com/nizarhamza/ball-balancing-table.git
-
-2. Connectez le matériel conformément aux instructions du schéma de câblage fourni dans le dossier "docs".
-
-3. Compilez et téléversez le code sur le microcontrôleur en suivant les étapes spécifiées dans le fichier "INSTALLATION.md".
-
-4. Exécutez l'application de contrôle depuis le répertoire "app" en suivant les instructions du fichier "USAGE.md".
-
 ## Contribution
 
-Nous accueillons les contributions de la communauté ! Si vous souhaitez participer au développement de ce projet, veuillez consulter le fichier "CONTRIBUTING.md" pour obtenir des instructions détaillées.
+Nous accueillons les contributions de la communauté ! Si vous souhaitez participer au développement de ce projet.
 
 ## Auteurs
 
@@ -56,4 +44,4 @@ Nous accueillons les contributions de la communauté ! Si vous souhaitez partici
 
 N'hésitez pas à explorer le code source et à partager vos retours d'expérience avec nous. Nous espérons que cette "Ball Balancing Table" apportera une expérience interactive et divertissante à vos utilisateurs !
 
-Bonne exploration !
+Bonne exploration!
