@@ -1,6 +1,4 @@
 # ball_balancing_table
- 
-# Projet "Ball Balancing Table"
 
 ## Description du Projet
 
@@ -21,20 +19,19 @@ offrant ainsi une expérience visuelle et ludique.
 
 ## Dépendances et Installation
 
-- **Matériel Requis :**
-  - Liste des capteurs
+- ***Matériel Requis :***
+  - **Liste des capteurs:**
 	-caméra
-  - Liste des moteurs
+  - **Liste des moteurs:**
 	-servomoteurs
-  - Microcontrôleur spécifique
+  - **Microcontrôleur spécifique:**
 	-STM32F407VGT6
 
-- **Logiciels Requis :**
-  - Environnement de développement
+- ***Logiciels Requis :***
+  - **Environnement de développement:**
 	-CubeMX
 	-CubeIDE
-  - Bibliothèques externes
-	-
+  - **Bibliothèques externes:**
 
 ## Configuration et Utilisation
 
