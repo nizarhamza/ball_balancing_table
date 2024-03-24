@@ -40,6 +40,7 @@ Nous accueillons les contributions de la communauté ! Si vous souhaitez partici
 ## Auteurs
 
 - [HAMZA Nizar](https://github.com/nizarhamza)
+- [Baha eddine HAMMOU](https://github.com/baha-eddine-hammou)
 
 
 N'hésitez pas à explorer le code source et à partager vos retours d'expérience avec nous. Nous espérons que cette "Ball Balancing Table" apportera une expérience interactive et divertissante à vos utilisateurs !
