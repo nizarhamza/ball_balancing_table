@@ -5,7 +5,7 @@ clc
 rm=0.024;
 lx=0.174;
 ly=1.35;
-g=0.01;
+g=10;
 Kbbtx=(5*g*rm)/(lx*7);
 Kbbty=(5*g*rm)/(ly*7);
 s=tf('s');
