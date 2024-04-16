@@ -1,0 +1,58 @@
+import cv2
+import numpy as np
+
+# Fonction pour détecter le ballon et renvoyer ses coordonnées
+def detect_ball(frame):
+    # Convertir l'image en niveaux de gris
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    # Appliquer un flou gaussien pour réduire le bruit
+    blurred = cv2.GaussianBlur(gray, (11, 11), 0)
+    
+    # Détecter les cercles dans l'image
+    circles = cv2.HoughCircles(blurred, cv2.HOUGH_GRADIENT, dp=1, minDist=100,
+                               param1=100, param2=30, minRadius=10, maxRadius=100)
+    
+    if circles is not None:
+        # Convertir les coordonnées (x, y) et le rayon en entiers
+        circles = np.round(circles[0, :]).astype("int")
+        
+        # Renvoyer les coordonnées du centre du cercle (nous ne prenons que le premier cercle détecté)
+        return circles[0][:2]
+    
+    return None
+
+# Lire la vidéo (ou utiliser la webcam en remplaçant le chemin de fichier par 0)
+video = cv2.VideoCapture(0)
+
+# Initialiser la position précédente du ballon
+prev_position = None
+
+while True:
+    # Lire le prochain frame de la vidéo
+    ret, frame = video.read()
+    if not ret:
+        break
+    
+    # Détecter la position actuelle du ballon
+    position = detect_ball(frame)
+    
+    if position is not None:
+        # Si le ballon est détecté, mettre à jour la position précédente
+        prev_position = position
+        # Dessiner un cercle sur le frame au centre du ballon
+        cv2.circle(frame, tuple(position), 5, (0, 255, 0), -1)
+        # Afficher les coordonnées du ballon
+        x, y = position
+        cv2.putText(frame, f"({x}, {y})", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+    
+    # Afficher le frame
+    cv2.imshow("Frame", frame)
+    
+    # Quitter si la touche 'q' est pressée
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Libérer la vidéo et détruire toutes les fenêtres ouvertes
+video.release()
+cv2.destroyAllWindows()
