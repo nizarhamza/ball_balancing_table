@@ -14,24 +14,20 @@
   <section class="body">
     <header class="color">
         <img  class="img" src="logon-removebg-preview.png" alt="our project">
-        <nav class=" nav" >
+        <nav class=" nav">
             <div class="titre" >
                 <img  class="image" src="logo-final.png" alt="logo" >
             </div>
-            <div class="line">
+            <div class="line" id="navbar">
             
                 <ul  type="none"class=" list" class="line" >
-                <li ><a href="/career" >Configuration</a></li>
+                <li ><a href="file:///C:/Users/Tassou/Desktop/projet-git/about-us/aboutus.html" >Configuration</a></li>
                 <li><a href="/career">Mesuraments</a></li>
-                <li><a href="/career"> Diagrams</a></li>
-                <li><a href="https://github.com/nizarhamza/ball_balancing_table">Adout-us </a></li>
+                <li><a href="/career">Diagrams </a></li>
+                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/about-us/aboutus.html">About-us </a></li>
             </Ul >
            
-        </div>
-     
-    
-        
-       
+        </div> 
     </nav>
    
     
@@ -326,6 +322,20 @@
     <div class="footer-bottom">
         <p>&copy; 2024 Ball Balancing Table. All rights reserved.</p>
     </div>
+    <script>
+      window.addEventListener('scroll', function() {
+        var navbar = document.getElementById('navbar');
+        var distanceFromTop = navbar.getBoundingClientRect().top;
+    
+        if (distanceFromTop <= 0) {
+          navbar.classList.add('line-fixed');
+        } else {
+          navbar.classList.remove('line-fixed');
+        }
+      });
+    </script>
+    
+    
 </footer>
 </section>
 </body>

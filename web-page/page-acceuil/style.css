@@ -12,14 +12,14 @@ a{
 
 .color{
     background-color: rgb(6, 9, 66); 
-    height: 350px;
+    height: 300px;
     width: 111%;
 }
 .titre{
     display: flex;
     align-items: center;
     justify-content:space-around;
-   height:150px;
+   height:100px;
    width: 200px;
 }
 
@@ -64,22 +64,30 @@ a{
     
     
 }
+#navbar {
+  position: static;
+
+}
+
+
 .line{
     all: unset;
     border-top: 0.01px solid rgb(178, 175, 175); 
     border-bottom: 0.01px solid rgb(178, 175, 175); 
-    ;
     padding: 10px; 
     margin-left: -10px; 
     margin-right: -10px;
     background-color:rgb(6, 9, 66); 
-    transform: translatex(-150px); 
+    transform: translatex(-150px);
+    position: fixed;
+     
+    
 }
 
 
 .video-nav{
     position: relative;
-    height: 370px;
+    height: 420px;
     width: 1500px;
 }
 

@@ -1,0 +1,69 @@
+a{
+    all: unset;
+    }
+
+
+.body{
+   
+    width: 90%;
+    
+   
+}
+
+.color{
+    background-color: rgb(6, 9, 66); 
+    height: 100px;
+    width: 111%;
+}
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+   height:100px;
+   width: 200px;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15rem;
+    margin-right:100px;
+    color: aliceblue;
+    font-size: 17px;
+    
+
+}
+.list a:hover {
+    color: rgb(52, 128, 176);
+    cursor: pointer;
+}
+
+
+    
+.nav{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 20px;
+    
+    
+}
+#navbar {
+  position: static;
+
+}
+
+
+.line{
+    all: unset;
+    border-top: 0.01px solid rgb(178, 175, 175); 
+    border-bottom: 0.01px solid rgb(178, 175, 175); 
+    padding: 10px; 
+    margin-left: -10px; 
+    margin-right: -10px;
+    background-color:rgb(6, 9, 66); 
+    transform: translatex(-150px);
+    position: fixed;
+    
+}
