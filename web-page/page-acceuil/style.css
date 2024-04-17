@@ -80,9 +80,9 @@ a{
     background-color:rgb(6, 9, 66); 
     transform: translatex(-150px);
     position: fixed;
-     
-    
+    font-family: Arial, sans-serif;
 }
+    
 
 
 .video-nav{
