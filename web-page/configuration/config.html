@@ -19,7 +19,7 @@
             
                 <ul  type="none"class=" list" class="line" >
                 <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/page-acceuil/index.html">Homepage </a></li>
-                <li><a href="/career">Mesuraments</a></li>
+                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/control-page/control.html">Control</a></li>
                 <li><a href="/career"> Diagrams</a></li>
                 <li ><a href="file:///C:/Users/Tassou/Desktop/projet-git/about-us/aboutus.html" >About-us</a></li>
                 
@@ -55,31 +55,39 @@
                   </div>
               </div>
               <div class="group">
-                  <div class="config-card">
-                      <h2 class="titre">Variable</h2>
+                  <div class="config-card translate">
+                      <h2 class="titre">Variables</h2>
                       <div class="boutton-container">
-                          <button class="boutton">KP(var)</button>
-                          <button class="boutton">Kd(var)</button>
-                          <button class="boutton">Ki(var)</button>
-                          <button class="boutton">Send</button>
+                          <button class="boutton">KP
+                          <label for="valeur" ></label>
+                          <input class="valeur" type="number" id="valeur" name="valeur">
+                          </button>
+                          <button class="boutton">KD
+                            <label for="valeur"></label>
+                            <input class="valeur" type="number" id="valeur" name="valeur">
+                            </button>
+                            <button class="boutton">Ki
+                                <label for="valeur"></label>
+                                <input class="valeur" type="number" id="valeur" name="valeur">
+                                </button><br>
+                          <button class="bouttone">Send</button>
                       </div>
                   </div>
-                  <div class="config-card">
-                    <h2 class="titre">shapes</h2>
-                      <div class="boutton-container">
-                          <button class="boutton">circle</button>
-                          <button class="boutton">rectangle</button>
-                          <button class="boutton">triangle</button>
-                          <button class="boutton">square</button>
-                      </div>
-                  </div>
+                 
               </div>
               <div class="config-card translate">
                 <h2 class="titre ">Servo-config</h2>
                   <div class="boutton-container">
-                      <button class="boutton">servox-offset</button>
-                      <button class="boutton">servoy-offset</button>
-                      <button class="boutton">Send</button>
+                      <button class="boutton">servox-offset
+                            <label for="valeur"></label>
+                            <input class="valeur" type="number" id="valeur" name="valeur">
+                            
+                      </button>
+                      <button class="boutton">servoy-offset
+                        <label for="valeur"></label>
+                            <input class="valeur" type="number" id="valeur" name="valeur">
+                      </button>
+                      <button class="bouttone">Send</button>
                   </div>
               </div>
           </div>
@@ -91,6 +99,11 @@
               </div>
           </div>
       </div>
+      <script>
+        // Modifier la valeur de la case de valeur avec l'ID "valeur"
+        document.getElementById("valeur") 
+    </script> 
+    
   </body>
   
       </html>

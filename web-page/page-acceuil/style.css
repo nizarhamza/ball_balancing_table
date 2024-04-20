@@ -122,7 +122,7 @@ a{
     flex-direction: row-reverse; 
     }
 h1{
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     letter-spacing: -.3px;
     color:rgb(27, 58, 132);
@@ -201,7 +201,7 @@ h1{
     flex-direction: column;
     padding: 2em 2em 0;
     justify-content: space-between;
-    height: 390px;
+    height: 450px;
     color: white;
 }
 .card1:hover {
@@ -215,7 +215,7 @@ h1{
     flex-direction: column;
     padding: 2em 2em 0;
     justify-content: space-between;
-    height: 390px;
+    height: 450px;
     background-color: #597da1; 
   color: white; 
 
@@ -232,9 +232,10 @@ h1{
     flex-direction: column;
     padding: 2em 2em 0;
     justify-content: space-between;
-    height: 390px;
+    height: 450px;
     background-color:  #181196;
   color: white; 
+ 
 }
 .card3:hover {
     background-color:  #1d2b50d9; 
@@ -259,6 +260,7 @@ h1{
 .card-text{
     font-family: cursive;
     font-size: 20px;
+    transform: translateY(-30px);
 }
 .section3 {
     background-color: rgb(231, 230, 230); 
@@ -508,6 +510,7 @@ h1{
   text-align: center;
   font-size: 1.1rem;
   margin: 1em 0;
+  
 }
 
 .card__btn{
