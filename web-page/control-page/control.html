@@ -19,8 +19,8 @@
             
                 <ul  type="none"class=" list" class="line" >
                 <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/page-acceuil/index.html">Homepage </a></li>
-                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/configuration/config.html"">Configuration</a></li>
-                <li><a href="/career"> Diagrams</a></li>
+                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/configuration/config.html">Configuration</a></li>
+                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/diagrams-page/diag.html">Diagrams</a></li>
                 <li ><a href="file:///C:/Users/Tassou/Desktop/projet-git/about-us/aboutus.html" >About-us</a></li>
                 
             </Ul >
@@ -33,74 +33,149 @@
           <h1 class="tt">Configuration</h1><br><br>
             <div class="group">
                 <div class="config-card">
-                    <h2 class="titre">Control</h2>
+                    <h2 class="titre">shapes</h2>
                     <div class="boutton-container">
-                        <button class="boutton">P(reg)</button>
-                        <button class="boutton">PD(reg)</button>
-                        <button class="boutton">PV(reg)</button>
-                        <button class="boutton">PID(reg)</button>
+                    <div class="row">
+                        <div class="shape">
+                            <button class="boutton" id="point-btn">
+                                <img  class="img " src="Capture_d_écran_2024-04-29_183706-removebg-preview.png" style="transform: translateY(3px);" alt="Point">
+                                <span>Point</span>
+                            </button>
+                            <div class="shape-values" id="point-values">
+                                <input type="number" placeholder="X">
+                                <input type="number" placeholder="Y">
+                                <button class="bouttone" style="transform: translate(10px, -20px);">Send</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="config-card">
-                    <h2 class="titre">Aspect</h2>
-                    <div class="boutton-container">
-                        <button class="boutton">Unstable</button>
-                        <button class="boutton">Amortie</button>
-                        <button class="boutton">Osci-AM</button>
-                        <button class="boutton">Osci</button>
+                    <div class="row">
+                        <div class="shape">
+                            <button class="boutton" id="circle-btn">
+                                <img style="transform: translate(-9px,3px); width: 15px;" class="img" src="cerle=creux.png" alt="Circle">
+                                <span>Circle</span>
+                                
+                            </button>
+                            <div class="shape-values" id="circle-values">
+                                <input style="transform: translateX(60px);" type="number" placeholder="R">
+                                <button class="bouttone" style="transform: translate(189px,-20px);">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="shape">
+                            <button class="boutton" id="rectangle-btn">
+                                <img class="img" src="Capture_d_écran_2024-04-29_183325-removebg-preview.png" alt="Rectangle">
+                                <span>Rectangle</span>
+                            </button>
+                            <div class="shape-values" id="rectangle-values">
+                                <input type="number" placeholder="A">
+                                <input type="number" placeholder="B">
+                                <button class="bouttone" style="transform: translate(20px, -20px);">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+        <button class="boutton" style="display: inline-block;"> <img class="img" style="transform: translateY(3px);" src="dots-removebg-preview.png" alt="">Random points</button>
+    </div>
                     </div>
                 </div>
             </div>
-            <div class="group">
-                <div class="config-card translate">
-                    <h2 class="titre">Variables</h2>
-                    <div class="boutton-container">
-                        <button class="boutton">KP
-                        <label for="valeur" ></label>
-                        <input class="valeur" type="number" id="valeur" name="valeur">
-                        </button>
-                        <button class="boutton">KD
-                          <label for="valeur"></label>
-                          <input class="valeur" type="number" id="valeur" name="valeur">
-                          </button>
-                          <button class="boutton">Ki
-                              <label for="valeur"></label>
-                              <input class="valeur" type="number" id="valeur" name="valeur">
-                              </button><br>
-                        <button class="bouttone">Send</button>
-                    </div>
-                </div>
-               
-            </div>
-            <div class="config-card translate">
-              <h2 class="titre ">Servo-config</h2>
-                <div class="boutton-container">
-                    <button class="boutton">servox-offset
-                          <label for="valeur"></label>
-                          <input class="valeur" type="number" id="valeur" name="valeur">
-                          
-                    </button>
-                    <button class="boutton">servoy-offset
-                      <label for="valeur"></label>
-                          <input class="valeur" type="number" id="valeur" name="valeur">
-                    </button>
-                    <button class="bouttone">Send</button>
-                </div>
-            </div>
+            
+           
         </div>
         <div class="right-section">
-          <h1 class="ttt">Visualisation</h1>
-            <!-- Affichage de la caméra -->
-            <div class="camera-display">
-                <!-- Insérer ici la vidéo de la caméra -->
-            </div>
-        </div>
-    </div>
+            <h1 class="ttt">Visualisation</h1>
+              <!-- Affichage de la caméra -->
+              <div  class="camera-display">   
+                <div class="button-container" >
+                <video class="video" id="video" autoplay></video>
+                 <button class="btn" onclick="startCamera()">Start</button>
+                 <button class="btn" onclick="stopCamera()">Stop</button>
+                 <button class="btn" onclick="refreshVideo()">Refresh</button>
+                </div> 
+              </div>
+          </div>
+      </div>
+      <script>
+        // Modifier la valeur de la case de valeur avec l'ID "valeur"
+        document.getElementById("valeur") 
+    </script> 
+  
+    <script>
+        let videoStream;
+
+function startCamera() {
+    // Vérifier si la caméra est déjà active
+    if (videoStream) {
+        console.log('Camera already started.');
+        return;
+    }
+
+    // Accéder à la caméra de l'utilisateur
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            var videoElement = document.getElementById('video');
+            videoElement.srcObject = stream;
+            videoStream = stream; // Conserver la référence au flux vidéo
+        })
+        .catch(function(err) {
+            console.error('Error accessing camera:', err);
+        });
+}
+
+function stopCamera() {
+    // Vérifier si la caméra est déjà arrêtée
+    if (!videoStream) {
+        console.log('Camera already stopped.');
+        return;
+    }
+
+    // Arrêter la capture vidéo
+    videoStream.getTracks().forEach(track => track.stop());
+    videoStream = null; // Réinitialiser la référence au flux vidéo
+}
+
+function refreshVideo() {
+    var videoElement = document.getElementById('video');
+    videoElement.srcObject = null; // Arrêter la vidéo actuelle
+    videoElement.srcObject = videoStream; // Rafraîchir la vidéo en rechargeant le flux vidéo
+}
+</script>
     <script>
       // Modifier la valeur de la case de valeur avec l'ID "valeur"
       document.getElementById("valeur") 
   </script> 
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const pointBtn = document.getElementById('point-btn');
+    const circleBtn = document.getElementById('circle-btn');
+    const rectangleBtn = document.getElementById('rectangle-btn');
+    const pointValues = document.getElementById('point-values');
+    const circleValues = document.getElementById('circle-values');
+    const rectangleValues = document.getElementById('rectangle-values');
+
+    pointBtn.addEventListener('click', function() {
+        toggleVisibility(pointValues);
+    });
+
+    circleBtn.addEventListener('click', function() {
+        toggleVisibility(circleValues);
+    });
+
+    rectangleBtn.addEventListener('click', function() {
+        toggleVisibility(rectangleValues);
+    });
+
+    function toggleVisibility(element) {
+        if (element.style.display === 'block') {
+            element.style.display = 'none';
+        } else {
+            element.style.display = 'block';
+        }
+    }
+});
+
+  </script>
 </body>
 
     </html>

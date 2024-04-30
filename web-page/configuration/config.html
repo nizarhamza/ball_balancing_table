@@ -20,7 +20,7 @@
                 <ul  type="none"class=" list" class="line" >
                 <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/page-acceuil/index.html">Homepage </a></li>
                 <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/control-page/control.html">Control</a></li>
-                <li><a href="/career"> Diagrams</a></li>
+                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/diagrams-page/diag.html">Diagrams</a></li>
                 <li ><a href="file:///C:/Users/Tassou/Desktop/projet-git/about-us/aboutus.html" >About-us</a></li>
                 
             </Ul >
@@ -94,8 +94,13 @@
           <div class="right-section">
             <h1 class="ttt">Visualisation</h1>
               <!-- Affichage de la caméra -->
-              <div class="camera-display">
-                  <!-- Insérer ici la vidéo de la caméra -->
+              <div  class="camera-display">   
+                <div class="button-container" >
+                <video class="video" id="video" autoplay></video>
+                 <button class="btn" onclick="startCamera()">Start</button>
+                 <button class="btn" onclick="stopCamera()">Stop</button>
+                 <button class="btn" onclick="refreshVideo()">Refresh</button>
+                </div> 
               </div>
           </div>
       </div>
@@ -103,7 +108,48 @@
         // Modifier la valeur de la case de valeur avec l'ID "valeur"
         document.getElementById("valeur") 
     </script> 
-    
+  
+    <script>
+        let videoStream;
+
+function startCamera() {
+    // Vérifier si la caméra est déjà active
+    if (videoStream) {
+        console.log('Camera already started.');
+        return;
+    }
+
+    // Accéder à la caméra de l'utilisateur
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            var videoElement = document.getElementById('video');
+            videoElement.srcObject = stream;
+            videoStream = stream; // Conserver la référence au flux vidéo
+        })
+        .catch(function(err) {
+            console.error('Error accessing camera:', err);
+        });
+}
+
+function stopCamera() {
+    // Vérifier si la caméra est déjà arrêtée
+    if (!videoStream) {
+        console.log('Camera already stopped.');
+        return;
+    }
+
+    // Arrêter la capture vidéo
+    videoStream.getTracks().forEach(track => track.stop());
+    videoStream = null; // Réinitialiser la référence au flux vidéo
+}
+
+function refreshVideo() {
+    var videoElement = document.getElementById('video');
+    videoElement.srcObject = null; // Arrêter la vidéo actuelle
+    videoElement.srcObject = videoStream; // Rafraîchir la vidéo en rechargeant le flux vidéo
+}
+</script>
+
   </body>
   
       </html>

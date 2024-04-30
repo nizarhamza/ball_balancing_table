@@ -26,7 +26,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15rem;
+    gap: 17rem;
     margin-right:100px;
     color: aliceblue;
     font-size: 17px;
@@ -60,16 +60,12 @@ a{
     border-bottom: 0.01px solid rgb(178, 175, 175); 
     padding: 10px; 
     margin-left: -10px; 
-    margin-right: -10px;
+    margin-right: -40px;
     background-color:rgb(6, 9, 66); 
     transform: translatex(-150px);
     position: fixed;
     
 }
-
-  
-
-
 body {
   font-family: Arial, sans-serif;
 }
@@ -78,9 +74,12 @@ body {
   display: flex;
     justify-content: center;
     align-items: flex-start; /* Alignement en haut */
-    height: 100vh;
-    max-width: 100vw; /* La largeur maximale sera la largeur de l'écran */
+    height: 120vh;
+    max-width: 600vh; /* La largeur maximale sera la largeur de l'écran */
     overflow-x: hidden;
+    margin-right: -100px;
+    margin-left: -50px;
+    
   transform: translateY(70px);
 }
 
@@ -88,13 +87,14 @@ body {
 .right-section{
   display: flex;
   flex-direction: column; /* Empiler les éléments verticalement */
-  padding: 10px;
+  padding: -30px;
   flex:1;
   margin-left: 100px;
 
 }
 .right-section{
-  width: 700px;
+  width: 690px;
+  margin-left: 40px;
 }
 
 .group {
@@ -107,7 +107,7 @@ body {
   background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 15px); /* Répartition égale sur la moitié de la largeur avec un espace entre */
+  
 }
 
 .camera-display {
@@ -132,19 +132,33 @@ body {
   display: flex;
   flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
   justify-content: center; 
+  height: 500px;
+  
+}
+.row {
+ margin: 60px;
+margin-bottom: -100px;
+margin-top: -10px;
+}
+.img{
+  width: 20px; /* Définir la taille de l'icône */
+  height: 20px; /* Assurer que la hauteur est proportionnelle à la largeur */
+  margin-right: 20px; /* Espacement entre l'icône et le texte */
+  transform: translate(0px ,7px);
 }
 
 .boutton {
   background-color: #2b3484;
   color: white;
   padding: 10px 20px;
-  margin: 10px; 
+  margin: 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+ width: 290px;
 }
 .bouttone {
   background-color: #045d3c;
@@ -157,6 +171,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  position: fixed;
 }
 .boutton:hover {
   background-color: #0d144c; /* Couleur de fond au survol */
@@ -178,10 +193,43 @@ body {
 }
 .ttt{
   font-family: Arial, Helvetica, sans-serif;
-  transform: translateX(200px);
+  transform: translateX(260px);
   color: black;
 }
 .valeur{
   width: 50px;
   transform: translateX(5px);
+}
+.shape-values {
+  display: none; /* Cacher initialement les cases de valeurs */
+  margin-top: 5px;
+}
+video{
+  width: 500px; 
+ transform: translate(170px,-80px);
+  border-radius: 5%;
+
+  
+}
+.btn{
+  background-color: #045d3c;
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin:10px; 
+    transform: translate(-230px, 230px);
+    font-size: 20px;
+    
+}
+
+.btn:hover {
+    background-color: #093215;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }

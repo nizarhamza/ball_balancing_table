@@ -26,7 +26,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15rem;
+    gap: 18rem;
     margin-right:100px;
     color: aliceblue;
     font-size: 17px;
@@ -60,7 +60,7 @@ a{
     border-bottom: 0.01px solid rgb(178, 175, 175); 
     padding: 10px; 
     margin-left: -10px; 
-    margin-right: -10px;
+    margin-right: -50px;
     background-color:rgb(6, 9, 66); 
     transform: translatex(-150px);
     position: fixed;
@@ -79,8 +79,11 @@ body {
     justify-content: center;
     align-items: flex-start; /* Alignement en haut */
     height: 100vh;
-    max-width: 100vw; /* La largeur maximale sera la largeur de l'écran */
+    max-width: 600vh; /* La largeur maximale sera la largeur de l'écran */
     overflow-x: hidden;
+    margin-right: -100px;
+    margin-left: -50px;
+    
   transform: translateY(70px);
 }
 
@@ -94,7 +97,8 @@ body {
 
 }
 .right-section{
-  width: 700px;
+  width: 690px;
+  margin-left: 40px;
 }
 
 .group {
@@ -158,6 +162,7 @@ body {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+
 .boutton:hover {
   background-color: #0d144c; /* Couleur de fond au survol */
 }
@@ -178,10 +183,39 @@ body {
 }
 .ttt{
   font-family: Arial, Helvetica, sans-serif;
-  transform: translateX(200px);
+  transform: translateX(260px);
   color: black;
 }
 .valeur{
   width: 50px;
   transform: translateX(5px);
+}
+.video{
+  width: 500px; 
+ transform: translate(170px,-80px);
+  border-radius: 5%;
+
+  
+}
+.btn{
+  background-color: #045d3c;
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin:10px; 
+    transform: translate(-230px, 230px);
+    font-size: 20px;
+    
+}
+
+.btn:hover {
+    background-color: #093215;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
