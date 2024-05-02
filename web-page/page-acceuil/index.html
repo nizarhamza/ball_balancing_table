@@ -14,16 +14,17 @@
   <section class="body">
     <header class="color">
         <img  class="img" src="logon-removebg-preview.png" alt="our project">
-        <nav class=" nav">
+        <nav class=" navbar">
             <div class="titre" >
                 <img  class="image" src="logo-final.png" alt="logo" >
             </div>
             <div class="line" id="navbar">
             
-                <ul  type="none"class=" list" class="line" >
+                <ul  type="none"class=" list" class="line nav-list">
+                <li><a href=""> <div style="color: rgb(24, 140, 211);"> Homepage</div> </a></li>
+                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/diagrams-page/diag.html">Explore</a></li>
                 <li ><a href="file:///C:/Users/Tassou/Desktop/projet-git/configuration/config.html" >Configuration</a></li>
                 <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/control-page/control.html">Control</a></li>
-                <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/diagrams-page/diag.html">Diagrams</a></li>
                 <li><a href="file:///C:/Users/Tassou/Desktop/projet-git/about-us/aboutus.html">About-us </a></li>
             </Ul >
            
@@ -322,21 +323,24 @@
     <div class="footer-bottom">
         <p>&copy; 2024 Ball Balancing Table. All rights reserved.</p>
     </div>
-    <script>
-      window.addEventListener('scroll', function() {
-        var navbar = document.getElementById('navbar');
-        var distanceFromTop = navbar.getBoundingClientRect().top;
-    
-        if (distanceFromTop <= 0) {
-          navbar.classList.add('line-fixed');
-        } else {
-          navbar.classList.remove('line-fixed');
-        }
-      });
-    </script>
+   
     
     
 </footer>
 </section>
+<script>
+// Get the current page URL
+let currentUrl = window.location.href;
+
+// Get all the links in the navbar
+let navLinks = document.querySelectorAll('.nav-list li a');
+
+// Loop through each link to check if it matches the current URL
+navLinks.forEach(link => {
+    if (link.href === currentUrl) {
+        link.parentNode.classList.add('active'); // Add the 'active' class to the parent list item
+    }
+});
+</script>
 </body>
 </html>

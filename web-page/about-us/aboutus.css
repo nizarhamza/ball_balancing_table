@@ -27,7 +27,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 17rem;
+    gap: 12.6rem;
     margin-right:100px;
     color: aliceblue;
     font-size: 17px;
@@ -63,7 +63,7 @@ a{
     border-bottom: 0.01px solid rgb(178, 175, 175); 
     padding: 10px; 
     margin-left: -10px; 
-    margin-right: -40px;
+    margin-right: -60px;
     background-color:rgb(6, 9, 66); 
     transform: translatex(-150px);
     position: fixed;

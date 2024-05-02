@@ -24,7 +24,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 19rem;
+    gap: 13rem;
     margin-right:100px;
     color: aliceblue;
     font-size: 17px;
@@ -53,13 +53,18 @@ a{
     height: auto;
     
 }
-.nav{
+.navbar{
     display:flex;
     align-items: center;
     justify-content:space-between;
     gap: 60px;
     
     
+}
+.nav-list li.active a {
+  background-color: lightblue; /* Change to your desired active color */
+  color: black; /* Change to your desired text color */
+  pointer-events: none; /* Disable the link */
 }
 #navbar {
   position: static;
@@ -74,7 +79,6 @@ a{
     padding: 10px; 
     margin-left: -10px; 
     margin-right: -280px;
-   
     background-color:rgb(6, 9, 66); 
     transform: translatex(-350px);
     position: fixed;
