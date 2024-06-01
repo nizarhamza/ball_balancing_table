@@ -11,3 +11,4 @@ Kbbty=(5*g*rm)/(ly*7);
 s=tf('s');
 tfmmx=Kbbtx/(s^2)
 tfmmy=Kbbty/(s^2)
+
